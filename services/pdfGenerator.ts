@@ -170,7 +170,7 @@ const drawTransformadorSection = (doc: any, transformadores: { faseR: Transforma
 export const generatePdf = (data: FormData) => {
   const { jsPDF } = jspdf;
   const doc = new jsPDF('p', 'mm', 'a4');
-  const now = new Date().toISOString().split('T')[0];
+  const now = new Date().toISOString();
   const totalPages = 10;
   let page = 1;
 
@@ -202,13 +202,13 @@ export const generatePdf = (data: FormData) => {
   const novedadesCol2 = ['Visita de verificación', 'Cambio de modem', 'Mantenimiento programado', 'Lectura en sitio', 'Adecuaciones en celda de medida', 'Otro - ¿Cuál?'];
   
   novedades.forEach((n, i) => {
-      drawCheckbox(doc, 75, 72 + i * 4, data.novedad.tipo === n);
+      drawCheckbox(doc, 75, 72 + i * 4, !!data.novedad.tipos[n]);
       doc.text(n, 79, 74 + i * 4);
   });
   novedadesCol2.forEach((n, i) => {
-      drawCheckbox(doc, 135, 72 + i * 4, data.novedad.tipo === n);
+      drawCheckbox(doc, 135, 72 + i * 4, !!data.novedad.tipos[n]);
       doc.text(n, 139, 74 + i * 4);
-      if(n.startsWith('Otro') && data.novedad.tipo === n) doc.text(data.novedad.otroTipo, 160, 96);
+      if(n.startsWith('Otro') && !!data.novedad.tipos[n]) doc.text(data.novedad.otroTipo, 160, 96);
   });
   
   doc.rect(10, 110, 190, 85);
@@ -365,5 +365,5 @@ export const generatePdf = (data: FormData) => {
   drawField(doc, '17.2. Documento de Identificación', data.responsable.documento, 15, 68, 180, 6);
   drawField(doc, '17.3. Fecha de Impresión de la Hoja de Vida', data.responsable.fechaImpresion, 15, 81, 180, 6);
 
-  doc.save(`${data.infoGeneral.nombreUsuario}-${data.responsable}-${now}.pdf`);
+  doc.save(`${data.infoGeneral.nombreUsuario}-${data.responsable.nombre}-${now}.pdf`);
 };
