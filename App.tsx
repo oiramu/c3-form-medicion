@@ -271,7 +271,7 @@ const App: React.FC = () => {
                 <InputField label="Código NIU" name="codigoNiu" value={state.codigoNiu} onChange={handleInputChange} placeholder={placeholderData.codigoNiu} />
             </Section>
             <Section title="1. Registro de Novedades">
-               <InputField label="Fecha de Última Novedad" name="novedad.fecha" value={state.novedad.fecha} onChange={handleInputChange} type="date" />
+               {/*<InputField label="Fecha de Última Novedad" name="novedad.fecha" value={state.novedad.fecha} onChange={handleInputChange} type="date" />*/}
                <InputField label="Fecha Verificación" name="novedad.fechaVerificacion" value={state.novedad.fechaVerificacion} onChange={handleInputChange} type="date" />
                 <div className="col-span-full grid grid-cols-1 md:grid-cols-2 gap-6 border-t pt-4 mt-4">
                     <div>
@@ -305,9 +305,9 @@ const App: React.FC = () => {
                 <InputField label="Longitud" name="infoGeneral.longitud" value={state.infoGeneral.longitud} onChange={handleInputChange} placeholder={placeholderData.infoGeneral.longitud}/>
                 <InputField label="Agente RF" name="infoGeneral.agenteRf" value={state.infoGeneral.agenteRf} onChange={handleInputChange} placeholder={placeholderData.infoGeneral.agenteRf}/>
                 <InputField label="Código SIC RF" name="infoGeneral.codigoSicRf" value={state.infoGeneral.codigoSicRf} onChange={handleInputChange} placeholder={placeholderData.infoGeneral.codigoSicRf}/>
-                <InputField label="Exportador Físico" name="infoGeneral.exportadorFisico" value={state.infoGeneral.exportadorFisico} onChange={handleInputChange} placeholder={placeholderData.infoGeneral.exportadorFisico}/>
+                {/**<InputField label="Exportador Físico" name="infoGeneral.exportadorFisico" value={state.infoGeneral.exportadorFisico} onChange={handleInputChange} placeholder={placeholderData.infoGeneral.exportadorFisico}/>
                 <InputField label="Código SIC EXP" name="infoGeneral.codigoSicExp" value={state.infoGeneral.codigoSicExp} onChange={handleInputChange} placeholder={placeholderData.infoGeneral.codigoSicExp}/>
-                <InputField label="Fecha de Registro" name="infoGeneral.fechaRegistro" value={state.infoGeneral.fechaRegistro} onChange={handleInputChange} type="date" />
+                <InputField label="Fecha de Registro" name="infoGeneral.fechaRegistro" value={state.infoGeneral.fechaRegistro} onChange={handleInputChange} type="date" />*/}
                 <InputField label="Tensión de Servicio (kV)" name="infoGeneral.tensionServicio" value={state.infoGeneral.tensionServicio} onChange={handleInputChange} placeholder={placeholderData.infoGeneral.tensionServicio}/>
                 <InputField label="Capacidad Instalada (kVA)" name="infoGeneral.capacidadInstalada" value={state.infoGeneral.capacidadInstalada} onChange={handleInputChange} placeholder={placeholderData.infoGeneral.capacidadInstalada}/>
                 <InputField label="Tipo Conexión" name="infoGeneral.conexion" value={state.infoGeneral.conexion} onChange={handleInputChange} placeholder={placeholderData.infoGeneral.conexion}/>
