@@ -264,8 +264,8 @@ const App: React.FC = () => {
       case 'general':
         return (
           <>
-            <Section title="Datos de Cabecera">
-                <InputField label="Cédula Catastral" name="cedulaCatastral" value={state.cedulaCatastral} onChange={handleInputChange} placeholder={placeholderData.cedulaCatastral} />
+            <Section title="Información de la Frontera">
+                <InputField label="Código del Cliente" name="codigoCliente" value={state.codigoCliente} onChange={handleInputChange} placeholder={placeholderData.codigoCliente} />
                 <InputField label="Código SIC Imp" name="codigoSicImp" value={state.codigoSicImp} onChange={handleInputChange} placeholder={placeholderData.codigoSicImp} />
                 <InputField label="Código SIC Exp" name="codigoSicExp" value={state.codigoSicExp} onChange={handleInputChange} placeholder={placeholderData.codigoSicExp} />
                 <InputField label="Código NIU" name="codigoNiu" value={state.codigoNiu} onChange={handleInputChange} placeholder={placeholderData.codigoNiu} />

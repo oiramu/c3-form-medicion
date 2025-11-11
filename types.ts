@@ -1,6 +1,6 @@
 export interface FormData {
   // Page 1
-  cedulaCatastral: string;
+  codigoCliente: string;
   codigoSicImp: string;
   codigoSicExp: string;
   codigoNiu: string;
@@ -240,7 +240,7 @@ const novedadTipos = {
 };
 
 export const placeholderData: FormData = {
-  cedulaCatastral: '123456789',
+  codigoCliente: '123456789',
   codigoSicImp: 'FRT11014',
   codigoSicExp: 'EXP-PAIPA-001',
   codigoNiu: 'CONSUMOS PROPIOS PAIPA 3',
@@ -406,7 +406,7 @@ export const placeholderData: FormData = {
 };
 
 export const initialFormData: FormData = {
-  cedulaCatastral: '',
+  codigoCliente: '',
   codigoSicImp: '',
   codigoSicExp: '',
   codigoNiu: '',

@@ -177,7 +177,7 @@ export const generatePdf = (data: FormData) => {
   // Page 1
   drawHeader(doc, page++, totalPages);
   doc.setFontSize(8);
-  drawField(doc, 'Cédula Catastral del Predio', data.cedulaCatastral, 50, 28, 40, 6);
+  drawField(doc, 'Código del Cliente', data.codigoCliente, 50, 28, 40, 6);
   drawField(doc, 'Código SIC de la frontera IMP-(Servicio Eléctrico)', data.codigoSicImp, 130, 28, 60, 6);
   drawField(doc, 'Código SIC de la Frontera EXP', data.codigoSicExp, 130, 38, 60, 6);
   drawField(doc, 'Código NIU de la Frontera', data.codigoNiu, 130, 48, 60, 6);
